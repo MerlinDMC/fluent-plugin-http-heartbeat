@@ -17,9 +17,9 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |s|
   s.name          = 'fluent-plugin-http-heartbeat'
-  s.version       = '0.0.3'
+  s.version       = '0.0.4'
   s.date          = '2016-02-28'
-  s.summary       = "Fluentd input plugin that responses with HTTP status 200."
+  s.summary       = "Fluentd input plugin that responses with HTTP status 200. Can be used for elb healthcheck."
   s.description   = s.summary
   s.authors       = ['Junjie Chen']
   s.email         = 'jacky.jjchen@gmail.com'
@@ -32,6 +32,6 @@ Gem::Specification.new do |s|
   s.test_files    = s.files.grep(%r{^(test|spec|features)/})
   s.require_paths = ["lib"]
  
-  s.add_dependency "fluentd", ">= 0.10.58", "< 2"
-  s.add_dependency "cool.io", ">= 1.4.3", "< 1.5.0"
+  s.add_dependency "fluentd", ">= 0.12.0", "< 2"
+  s.add_dependency "cool.io", ">= 1.2.0", "< 1.5.0"
 end
