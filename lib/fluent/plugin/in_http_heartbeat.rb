@@ -25,10 +25,6 @@ module Fluent
     end
 
     class HeartbeatConnection < Cool.io::TCPSocket
-      def on_connect
-        puts "#{remote_addr}:#{remote_port} connected"
-      end
-
       def on_read(data)
         body = "heartbeat"
 
